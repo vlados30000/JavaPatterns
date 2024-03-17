@@ -30,15 +30,20 @@ public class Person {
 
     public String getName() {
         return name;
-    }
+       }
 
     public String getSurname() {
         return surname;
     }
 
     public OptionalInt getAge() {
-        return OptionalInt.empty();
+        if (age == 0) {
+            return OptionalInt.empty();
+        } else {
+            return OptionalInt.of(age);
+        }
     }
+
 
     public String getAddress() {
         return city;
